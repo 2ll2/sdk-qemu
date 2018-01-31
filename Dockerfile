@@ -17,7 +17,7 @@ RUN \
   apk add \
     qemu-system-aarch64@repo-sdk \
     qemu-system-x86_64@repo-sdk \
-    qemu@repo-sdk \
+    qemu@repo-sdk && \
   \
   # cleanup
   rm -f /etc/apk/keys/Builder-59ffc9b9.rsa.pub && \
