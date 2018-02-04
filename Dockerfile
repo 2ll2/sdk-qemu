@@ -19,6 +19,10 @@ RUN \
     qemu-system-x86_64@repo-sdk \
     qemu@repo-sdk && \
   \
+  # remove @repo-sdk from apk
+  sed -i -e 's/@repo-sdk//' /etc/apk/world && \
+  sed -i -e '/@repo-sdk/d' /etc/apk/repositories && \
+  \
   # cleanup
   rm -f /etc/apk/keys/Builder-59ffc9b9.rsa.pub && \
   rm -rf /tmp/* && \
